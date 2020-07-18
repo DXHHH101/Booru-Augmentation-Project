@@ -3,7 +3,6 @@
 // @description	Enhance your basic booru experience
 // @version		1.1.2
 // @author		Seedmanc
-// @forkAuthor	DXHHH101
 // @include		https://*.booru.org/*index.php?page=post*
 // @include		https://*.booru.org/*index.php?page=alias*
 // @include		https://*.booru.org/*index.php?page=comment*

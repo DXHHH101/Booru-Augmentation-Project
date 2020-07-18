@@ -6,7 +6,7 @@ function postPageMain() {
 
 	storeTags();
 
-	if (image.getWidth() > 1480) {
+	if (image.getWidth() > window.BAPopts.maxImageWidth || image.getHeight > window.BAPopts.maxImageHeight) {
 		$('note-container').setAttribute('style', 'cursor:pointer');
 	}
 
@@ -16,9 +16,11 @@ function postPageMain() {
 		'.aDelete{font-size:smaller; background-color:rgba(255,0, 0, 0.2);}' +
 		'.aAdd {font-size:smaller; background-color:rgba(0, 255, 0, 0.25);}' +
 		'#image{max-width:1480px; margin-right:0 !important;}' +
-		'.fitIn{max-width:auto !important;}' +
+		'.fitIn{max-width:<window.BAPopts.maxImageWidth> max-height:<window.BAPopts.maxImageHeight> !important;}' +
 		'</style>'
 	);
+	
+	
 
 	image.setAttribute('style', '');
 	image.onclick = function () {
@@ -247,7 +249,7 @@ function toggleFitIn(that) {
 	if (that.getAttribute('style')) {
 		that.setAttribute('style', '');
 	} else {
-		that.setAttribute('style', 'max-width:90000px !important;');
+		that.setAttribute('style', 'max-width:90000px max-height:90000px !important;');
 	}
 }
 

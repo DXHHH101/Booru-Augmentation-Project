@@ -6,10 +6,8 @@ function postPageMain() {
 
 	storeTags();
 	
-	var maxImageWidth = window.BAPopts.maxImageWidth;
-	var maxImageHeight = window.BAPopts.maxImageHeight;
 
-	if (image.getWidth() > maxImageWidth || image.getHeight > maxImageHeight) {
+	if (image.getWidth() > 1480) {
 		$('note-container').setAttribute('style', 'cursor:pointer');
 	}
 

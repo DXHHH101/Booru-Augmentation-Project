@@ -15,19 +15,11 @@ function optionsPageMain() {
 
 	new Insertion.Bottom(table, '<tr><td><div style="float:left; text-align:justify;"><label class="block" for="showTags">Show complete tag list</label><p>Display here a list of all tags sorted by their amount of posts</p></div><div style="float:right"><br><input id="showTags" type="radio" name="tools"/></div></td>\
 		<td><div style="float:left; text-align:justify; padding-left:100px"><label class="block" for="showScanner">Show Booru Scanner</label><p>Allows to fetch complete post and tag data from the booru, as well as a list of image links.</p></div><div><br><input id="showScanner" type="radio" name="tools" checked/></div></td></tr>');
-	
-	new Insertion.Bottom(table, '<tr><td><div style="float:left; text-align:justify;"><label class="block" for="maxImageWidth">Maximum Image Width</label><p>Maximum width to scale images to</p></div><div style="float:right"><br><input class="BAPoption" id="maxImageWidth" type="number" style="width: 65px; text-align: right;"/></td></tr>');
-	new Insertion.Bottom(table, '<tr><td><div style="float:left; text-align:justify;"><label class="block" for="maxImageHeight">Maximum Image Height</label><p>Maximum height to scale images to</p></div><div style="float:right"><br><input class="BAPoption" id="maxImageHeight" type="number" style="width: 65px; text-align: right;"/></td></tr>');
 
 
 	Object.keys(BAPopts).each(function (opt) {
 		if ($$('input.BAPoption#' + opt)[0]) {
-			if ($$('input.BAPoption#' + opt)[0].type == "checkbox") {
-				$$('input.BAPoption#' + opt)[0].checked = BAPopts[opt];
-			} else if ($$('input.BAPoption#' + opt)[0].type == "number") {
-				$$('input.BAPoption#' + opt)[0].value = BAPopts[opt];
-			}
-			
+			$$('input.BAPoption#' + opt)[0].checked = BAPopts[opt];
 		}
 	});
 
@@ -36,12 +28,7 @@ function optionsPageMain() {
 
 	submit.onclick = function () {
 		$$('input.BAPoption').each(function (el) {
-			if (el.type == "checkbox") {
-				BAPopts[el.id] = el.checked;
-			} else if (el.type == "number") {
-				BAPopts[el.id] = el.value;
-			}
-			
+			BAPopts[el.id] = el.checked;
 		});
 		localStorage.BAPopts = JSON.stringify(BAPopts);
 	};
@@ -167,7 +154,7 @@ function showScanner() {
 	}
 
 	new Insertion.After($$('form > p')[0],
-		'<div class="option" style="float:right; height:0; left:750px; position:absolute;"><table id="scanner" class="" style="width:680px; margin-bottom:0;"><thead><tr><th colspan=2><center>Booru scanner</center></th></tr></thead><tbody></tbody></table></div>');
+		'<div class="option" style="float:right; height:0; left:740px; position:absolute;"><table id="scanner" class="" style="width:680px; margin-bottom:0;"><thead><tr><th colspan=2><center>Booru scanner</center></th></tr></thead><tbody></tbody></table></div>');
 	table = $$('#scanner tbody')[0];
 
 	new Insertion.Bottom(table,

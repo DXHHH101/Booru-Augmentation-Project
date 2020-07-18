@@ -18,7 +18,7 @@ function postPageMain() {
 		'.aEdit{font-size:smaller; background-color:rgba(255, 255, 0, 0.33);}' +
 		'.aDelete{font-size:smaller; background-color:rgba(255,0, 0, 0.2);}' +
 		'.aAdd {font-size:smaller; background-color:rgba(0, 255, 0, 0.25);}' +
-		'#image{max-width:1vmin; max-height:auto; margin-right:0 !important;}' +
+		'#image{max-width:100vmin; max-height:100vmin; margin-right:0 !important;}' +
 		'.fitIn{max-width:auto !important;}' +
 		'</style>'
 	);

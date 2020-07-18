@@ -35,7 +35,7 @@ var pages = {
 var hosting = 'https://dxhhh101.github.io/Booru-Augmentation-Project/';
 
 window.BAPtags = {};
-window.BAPopts = JSON.parse(localStorage.getItem('BAPopts') || '{"ansiOnly":true, "solo":true, "tagme":true, "maxImageWidth":1480, "maxImageHeight":200}');
+window.BAPopts = JSON.parse(localStorage.getItem('BAPopts') || '{"ansiOnly":false, "solo":true, "tagme":true, "maxImageWidth":1480, "maxImageHeight":200}');
 window.currentBooru = document.location.host.split('.')[0];
 window.taglist = {};
 window.linklist = [];

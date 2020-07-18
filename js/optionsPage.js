@@ -22,7 +22,12 @@ function optionsPageMain() {
 
 	Object.keys(BAPopts).each(function (opt) {
 		if ($$('input.BAPoption#' + opt)[0]) {
-			$$('input.BAPoption#' + opt)[0].checked = BAPopts[opt];
+			if ($$('input.BAPoption#' + opt)[0].type == "checkbox") {
+				$$('input.BAPoption#' + opt)[0].checked = BAPopts[opt];
+			} else if ($$('input.BAPoption#' + opt)[0].type == "number") {
+				$$('input.BAPoption#' + opt)[0].value = BAPopts[opt];
+			}
+			
 		}
 	});
 
@@ -31,7 +36,12 @@ function optionsPageMain() {
 
 	submit.onclick = function () {
 		$$('input.BAPoption').each(function (el) {
-			BAPopts[el.id] = el.checked;
+			if (el.type == "checkbox") {
+				BAPopts[el.id] = el.checked;
+			} else if (el.type == "number") {
+				BAPopts[el.id] = el.value;
+			}
+			
 		});
 		localStorage.BAPopts = JSON.stringify(BAPopts);
 	};

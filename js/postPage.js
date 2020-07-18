@@ -5,8 +5,11 @@ function postPageMain() {
 	var taglist = $$('div#tag_list li a');
 
 	storeTags();
+	
+	var maxImageWidth = window.BAPopts.maxImageWidth;
+	var maxImageHeight = window.BAPopts.maxImageHeight;
 
-	if (image.getWidth() > window.BAPopts.maxImageWidth || image.getHeight > window.BAPopts.maxImageHeight) {
+	if (image.getWidth() > maxImageWidth || image.getHeight > maxImageHeight) {
 		$('note-container').setAttribute('style', 'cursor:pointer');
 	}
 
@@ -15,7 +18,7 @@ function postPageMain() {
 		'.aEdit{font-size:smaller; background-color:rgba(255, 255, 0, 0.33);}' +
 		'.aDelete{font-size:smaller; background-color:rgba(255,0, 0, 0.2);}' +
 		'.aAdd {font-size:smaller; background-color:rgba(0, 255, 0, 0.25);}' +
-		'#image{max-width:vmin; max-height:auto; margin-right:0 !important;}' +
+		'#image{max-width:maxImageWidth; max-height:maxImageHeight; margin-right:0 !important;}' +
 		'.fitIn{max-width:auto !important;}' +
 		'</style>'
 	);

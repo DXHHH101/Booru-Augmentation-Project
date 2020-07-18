@@ -16,7 +16,8 @@ function optionsPageMain() {
 	new Insertion.Bottom(table, '<tr><td><div style="float:left; text-align:justify;"><label class="block" for="showTags">Show complete tag list</label><p>Display here a list of all tags sorted by their amount of posts</p></div><div style="float:right"><br><input id="showTags" type="radio" name="tools"/></div></td>\
 		<td><div style="float:left; text-align:justify; padding-left:100px"><label class="block" for="showScanner">Show Booru Scanner</label><p>Allows to fetch complete post and tag data from the booru, as well as a list of image links.</p></div><div><br><input id="showScanner" type="radio" name="tools" checked/></div></td></tr>');
 	
-	new Insertion.Bottom(table, '<tr><td><div style="float:left; text-align:justify;"><label class="block" for="ansiOnly">Test</label><p>Do not accept non-ANSI tags when editing tags in-place</p></div><div style="float:right"><br><input class="BAPoption" id="maxImageWidth" type="number" style="width: 65px; text-align: right;"/></td></tr>');
+	new Insertion.Bottom(table, '<tr><td><div style="float:left; text-align:justify;"><label class="block" for="maxImageWidth">Maximum Image Width</label><p>Maximum width to scale images to</p></div><div style="float:right"><br><input class="BAPoption" id="maxImageWidth" type="number" style="width: 65px; text-align: right;"/></td></tr>');
+	new Insertion.Bottom(table, '<tr><td><div style="float:left; text-align:justify;"><label class="block" for="maxImageHeight">Maximum Image Height</label><p>Maximum height to scale images to</p></div><div style="float:right"><br><input class="BAPoption" id="maxImageHeight" type="number" style="width: 65px; text-align: right;"/></td></tr>');
 
 
 	Object.keys(BAPopts).each(function (opt) {

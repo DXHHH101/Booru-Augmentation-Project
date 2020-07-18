@@ -15,8 +15,8 @@ function postPageMain() {
 		'.aEdit{font-size:smaller; background-color:rgba(255, 255, 0, 0.33);}' +
 		'.aDelete{font-size:smaller; background-color:rgba(255,0, 0, 0.2);}' +
 		'.aAdd {font-size:smaller; background-color:rgba(0, 255, 0, 0.25);}' +
-		'#image{max-width:1480px; margin-right:0 !important;}' +
-		'.fitIn{max-width:<window.BAPopts.maxImageWidth> !important; max-height:<window.BAPopts.maxImageHeight> !important;}' +
+		'#image{max-width:<window.BAPopts.maxImageWidth>; max-height:<window.BAPopts.maxImageHeight> margin-right:0 !important;}' +
+		'.fitIn{max-width:auto !important;}' +
 		'</style>'
 	);
 	

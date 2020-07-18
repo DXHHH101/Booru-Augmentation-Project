@@ -33,7 +33,7 @@ var pages = {
         'view': postPage
     }
 };
-var hosting = 'https://raw.githubusercontent.com/DXHHH101/Booru-Augmentation-Project/master/';
+var hosting = 'https://dxhhh101.github.io/Booru-Augmentation-Project/';
 
 window.BAPtags = {};
 window.BAPopts = JSON.parse(localStorage.getItem('BAPopts') || '{"ansiOnly":true, "solo":true, "tagme":true}');

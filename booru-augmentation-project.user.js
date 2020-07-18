@@ -3,7 +3,7 @@
 // @description	Enhance your basic booru experience
 // @version		1.1.2
 // @author		Seedmanc
-// @forkAuthor 	DXHHH101
+// @forkAuthor	DXHHH101
 // @include		https://*.booru.org/*index.php?page=post*
 // @include		https://*.booru.org/*index.php?page=alias*
 // @include		https://*.booru.org/*index.php?page=comment*
@@ -33,7 +33,7 @@ var pages = {
         'view': postPage
     }
 };
-var hosting = 'https://github.com/DXHHH101/Booru-Augmentation-Project';
+var hosting = 'https://github.com/DXHHH101/Booru-Augmentation-Project/';
 
 window.BAPtags = {};
 window.BAPopts = JSON.parse(localStorage.getItem('BAPopts') || '{"ansiOnly":true, "solo":true, "tagme":true}');
